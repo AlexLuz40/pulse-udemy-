@@ -2,43 +2,9 @@
 
 $(document).ready(function () {
     $('.carousel__inner').slick({
-        speed: 1200,
+        speed: 800,
         prevArrow: '<button type="button" class="slick-prev"><img src="icon/chevron/chevron_left.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icon/chevron/chevron_right.png"></button>',
-        // responsive: [
-        // {
-        //     breakpoint: 768,
-        //     settings: {
-        //         arrows: false,
-        //         dots: true,
-        //     }
-        // },
-        // {
-        //     breakpoint: 1024,
-        //     settings: {
-        //         // slidesToShow: 3,
-        //         // slidesToScroll: 3,
-        //         arrows: false,
-        //         dots: false
-        //     }
-        // },
-        // {
-        //     breakpoint: 600,
-        //     settings: {
-        //         // slidesToShow: 2,
-        //         // slidesToScroll: 2
-        //         arrows: false,
-        //         dots: false
-        //     }
-        // },
-        // {
-        //     breakpoint: 480,
-        //     settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1
-        //     }
-        // }
-        // ]
+        nextArrow: '<button type="button" class="slick-next"><img src="icon/chevron/chevron_right.png"></button>'
     });
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
