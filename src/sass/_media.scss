@@ -21,6 +21,9 @@
   .promo {
     min-height: 450px;
   }
+  .consultation {
+    padding-left: 30px;
+  }
   .advantages {
     padding: 55px 0;
     margin-top: 12px;
@@ -56,6 +59,16 @@
       font-size: 11px;
     }
     &__list li {
+      font-size: 12px;
+    }
+  }
+  .reviews {
+    &__img {
+      margin-right: 50px;
+      width: 150px;
+      height: 150px;
+    }
+    &__descr {
       font-size: 12px;
     }
   }
@@ -145,15 +158,15 @@
     }
     .slick-prev,
     .slick-next {
-      left: -15px;
+      left: -35px;
       img {
-        width: 22px;
+        width: 26px;
         height: 38px;
       }
     }
     .slick-next {
       left: auto;
-      right: -15px;
+      right: -35px;
     }
 
     .slick-slide {
@@ -178,6 +191,16 @@
     }
     &-item {
       margin: 5px auto;
+    }
+  }
+  .reviews {
+    &__client {
+      img {
+        display: block;
+        margin-top: 80px;
+        width: 130px;
+        height: 130px;
+      }
     }
   }
 }
@@ -273,11 +296,11 @@
   .carousel {
     padding: 30px 0;
     &__inner {
-      width: 360px;
+      width: 280px;
     }
     .slick-prev,
     .slick-next {
-      left: 30px;
+      left: -25px;
       img {
         width: 11px;
         height: 19px;
@@ -285,14 +308,14 @@
     }
     .slick-next {
       left: auto;
-      right: 30px;
+      right: -25px;
     }
 
     .slick-slide {
       img {
         display: block;
         margin: 0 auto;
-        width: 48%;
+        width: 60%;
       }
     }
   }
@@ -305,6 +328,20 @@
       height: 25px;
       line-height: 25px;
       width: 80px;
+    }
+  }
+  .reviews {
+    &__client {
+      flex-direction: column;
+      img {
+        margin: 0 auto;
+      }
+    }
+    &__text {
+      text-align: center;
+    }
+    &__name {
+      margin-top: 14px;
     }
   }
   .title {
