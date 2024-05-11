@@ -281,6 +281,12 @@
 }
 
 @media (max-width: 575px) {
+  .feed-form {
+    width: 260px;
+    input {
+      height: 40px;
+    }
+  }
   .container {
     min-width: 265px;
   }
@@ -434,6 +440,22 @@
       margin-bottom: 3px;
     }
   }
+  .modal {
+    width: 220px;
+    min-height: 280px;
+    padding: 20px 8px 14px 8px;
+    &__subtitle {
+      font-size: 12px;
+      line-height: 12px;
+    }
+    &__descr {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+  .feed-form_mt25 {
+    width: 196px;
+  }
   .title {
     font-size: 25px;
     &_left {
@@ -457,11 +479,10 @@
 
       font-size: 16px;
     }
-  }
-  .feed-form {
-    width: 260px;
-    input {
+    &_submit-mini {
+      width: 196px;
       height: 40px;
+      font-size: 12px;
     }
   }
 }

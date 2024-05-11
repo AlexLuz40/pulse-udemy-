@@ -41,23 +41,44 @@ $(document).ready(function () {
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+    /* 2nd option */
+
+    // const slider = tns({
+    //     container: '.carousel__inner',
+    //     items: 1,
+    //     slideBy: 'page',
+    //     autoplay: false,
+    //     controls: false,/* убираем стрелки созданные в tiny-slider */
+    //     nav: false/* убираем точки созданные в tiny-slider */
+    // });
+    // /* (наши стрелки создаем в html 138-143 строки)навешиваем на наши стрелки определенные события */
+    // document.querySelector('.prev').addEventListener('click', function () {
+    //     slider.goTo('prev');
+    // });
+
+    // document.querySelector('.next').addEventListener('click', function () {
+    //     slider.goTo('next');
+    // });
+
+    // modal
+
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+
+    $('.modal__close').on('click', function () {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
 });
 
-/* 2nd option */
 
-// const slider = tns({
-//     container: '.carousel__inner',
-//     items: 1,
-//     slideBy: 'page',
-//     autoplay: false,
-//     controls: false,/* убираем стрелки созданные в tiny-slider */
-//     nav: false/* убираем точки созданные в tiny-slider */
-// });
-// /* (наши стрелки создаем в html 138-143 строки)навешиваем на наши стрелки определенные события */
-// document.querySelector('.prev').addEventListener('click', function () {
-//     slider.goTo('prev');
-// });
 
-// document.querySelector('.next').addEventListener('click', function () {
-//     slider.goTo('next');
-// });
+
+
