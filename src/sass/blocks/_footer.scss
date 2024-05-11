@@ -1,10 +1,10 @@
 .footer {
-  height: 630px;
+  min-height: 630px;
   position: relative;
   &__info {
     position: absolute;
     width: 460px;
-    height: 270px;
+    min-height: 270px;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
