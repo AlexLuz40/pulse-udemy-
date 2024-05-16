@@ -40,4 +40,17 @@
       border: 2px solid #fff;
     }
   }
+  &_submit-form {
+    font-size: 11px;
+    height: 34px;
+    &:hover {
+      font-size: 10px;
+    }
+  }
+  &_submit-mini {
+    font-size: 12px;
+    &:hover {
+      font-size: 13px;
+    }
+  }
 }

@@ -76,6 +76,60 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+    function validForm(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "введите имя",
+                    minlength: jQuery.validator.format("введите {0} символа")
+                },
+                phone: "введите номер телефона",
+                email: {
+                    required: "введите адрес почты",
+                    email: "Ваш почтовый адресс должен быть в формате name@domain.com"
+                }
+            }
+        });
+    };
+
+    validForm('#consultation-form');
+    validForm('#consultation form');
+    validForm('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-9999");
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: 'mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find('input').val('');
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
 });
 
 
