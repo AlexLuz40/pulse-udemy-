@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pulse</title>
-    <link rel="stylesheet" href="css/slick.css" />
+    <!-- <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" /> -->
     <!-- 1st option -->
 
     <!-- 2nd option -->
@@ -15,14 +15,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
     /> -->
+    <!-- <link rel="stylesheet" href="css/animate.css" /> -->
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <section class="promo">
+    <section id="up" class="promo">
       <div class="container">
         <header class="header">
           <a href="#" class="header__logo">
-            <img src="./icon/running-man-2-64.png" alt="" />
+            <img src="./icon/running-man-2-64.png" alt="running-ma" />
           </a>
           <div class="header__official">
             Официальный представитель
@@ -84,7 +85,11 @@
             </div>
           </div>
           <div class="advantages__task">
-            <img src="./icon/advantages/heart.png" alt="heart" />
+            <img
+              src="./icon/advantages/heart.png"
+              alt="heart"
+              class="advantages__icon advantages__icon_animated"
+            />
 
             <div class="advantages__subheader">Заботимся о здоровье</div>
             <div class="advantages__text">
@@ -126,7 +131,7 @@
         </form>
       </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
       <div class="container">
         <div class="carousel__inner">
           <div>
@@ -147,7 +152,7 @@
           <img src="icon/chevron/chevron_right.png" />
         </button> -->
       </div>
-    </section>
+    </div>
     <section class="catalog">
       <div class="container">
         <h2 class="title">Каталог пульсометров</h2>
@@ -531,7 +536,11 @@
       <div class="container">
         <h2 class="title">отзывы клиентов</h2>
         <div class="reviews__clients">
-          <div class="reviews__client">
+          <div
+            class="reviews__client fadeInUp wow"
+            data-wow-duration="2s"
+            data-wow-delay="1s"
+          >
             <img
               src="img/clients/photo_1.png"
               alt="client"
@@ -549,7 +558,11 @@
               </div>
             </div>
           </div>
-          <div class="reviews__client">
+          <div
+            class="reviews__client fadeInUp wow"
+            data-wow-duration="2s"
+            data-wow-delay="1s"
+          >
             <img
               src="img/clients/photo_2.png"
               alt="client"
@@ -568,7 +581,11 @@
               </div>
             </div>
           </div>
-          <div class="reviews__client">
+          <div
+            class="reviews__client fadeInUp wow"
+            data-wow-duration="2s"
+            data-wow-delay="1s"
+          >
             <img
               src="img/clients/photo_3.png"
               alt="client"
@@ -659,21 +676,28 @@
       </div>
     </div>
 
+    <a href="#up" class="pageup">
+      <img src="icon/chevron-up.svg" alt="chevron-up" />
+    </a>
+
     <!-- 1st option -->
-    <script
+    <!-- <script
       type="text/javascript"
-      src="https://code.jquery.com/jquery-1.11.0.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"
+    ></script> -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <!-- 2nd option -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
 
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
